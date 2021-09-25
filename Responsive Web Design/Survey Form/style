@@ -1,0 +1,94 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: white;
+}
+#link {
+  color: blue;
+  text-decoration: none;
+}
+#link:hover {
+  text-decoration: underline;
+}
+.required-dot {
+  color: red;
+}
+.form-group {
+  margin: .5em;
+  display: grid;
+  grid-auto-flow: row;
+}
+input {
+  padding: .5em;
+}
+select {
+  padding: .5em;
+}
+textarea {
+  padding: .5em;
+  font-family: 'Lato', sans-serif;
+  min-height: 60px;
+}
+
+/* CURRENT */
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  height: 100vh;
+}
+
+/* SECTION 1 */
+
+#sec-1 {
+  display: grid;
+  place-content: center;
+  background-color: #6C63FF;
+  padding: 1em;
+}
+
+#title {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+#description {
+  font-size: 1.7em;
+}
+
+#required-info {
+  color: red;
+}
+
+#submit {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100px;
+  padding: .5em;
+  font-size: 1.2em;
+  color: white;
+  background-color: #FF6584;
+}
+
+/* SECTION 2 */
+
+#sec-2 {
+  display: grid;
+  place-content: center;
+  padding: 1em;
+}
+
+#illustration {
+  max-width: 100%;
+  height: auto;
+}
+
+#illustration-source {
+  color: black;
+  place-self: center;
+}v

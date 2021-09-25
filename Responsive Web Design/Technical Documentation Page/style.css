@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #1D1D1D;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #6F6F6F;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #68A063;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+/* CURRENT */
+
+/* NAVBAR */
+#navbar {
+  display: grid;
+  grid-auto-flow: row;
+  place-content: start;
+  position: fixed;
+  width: fit-content;
+  height: 100vh;
+  background-color: #E6E6E6;
+  padding: .4em;
+  box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.50);
+}
+
+#navbar header {
+  font-size: 3em;
+  font-weight: bold;
+  color: #3C873A;
+}
+
+#navbar ul {
+  list-style: none;
+  margin-left: -2.5em;
+}
+
+#navbar ul li {
+  padding: .4em;
+  margin-bottom: .1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.4em;
+  color: #68A063;
+}
+
+/* MAIN */
+#main-doc {
+  margin-left: 12em;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+  #navbar header {
+    font-size: 2.2em;
+  }
+  
+  .nav-link {
+    font-size: 1.2em;
+  }
+  
+  #main-doc {
+    margin-left: 9.25em;
+  }
+}

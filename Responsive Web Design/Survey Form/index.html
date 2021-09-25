@@ -1,0 +1,61 @@
+<main id="main">
+  <section id="sec-1">
+    <h1 id="title">Illustration opinion survey form</h1>
+    <p id="description">Tell us your opinion about the image on the right</p>
+    <p id="required-info">* are required fields</p>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name: <span class="required-dot">*</span></label>
+        <input type="text" name="name" id="name" placeholder="Enter your name here" required/>
+      <div>
+      <div class="form-group">
+        <label id="email-label" for="name">Email: <span class="required-dot">*</span></label>
+        <input type="email" name="email" id="email" placeholder="Enter your email here" required/>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" name="age" id="number" placeholder="Enter your age here (optional)" min="13" max="100"/>
+      </div>
+      <div class="form-group">
+        <label id="dropdown-label">How did you find this survery form? <span class="required-dot">*</span></label>
+        <select id="dropdown" name="role" class="form-control" required/>
+        <option disabled selected value>Select an option</option>
+        <option value="email">By email</option>
+        <option value="advertisement">By an advertisement</option>
+        <option value="recomendation">By a recommendation</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label id="radio-label">What do you like the most? <span class="required-dot">*</span></label>
+        <label><input type="radio" name="most-liked" value="colours" checked/>Colours</label>
+        <label><input type="radio" name="most-liked" value="lines"/>Lines</label>
+        <label><input type="radio" name="most-liked" value="concept"/>Concept</label>
+      </div>
+      <div class="form-group">
+        <label id="radio-label">What things would you change (add, delete or edit)? <span class="required-dot">*</span></label>
+        <label><input type="checkbox" name="would-change" value="colour-palette"/>Colour palette</label>
+        <label><input type="checkbox" name="would-change" value="lines-positioning"/>Lines positioning</label>
+        <label><input type="checkbox" name="would-change" value="background"/>Background</label>
+        <label><input type="checkbox" name="would-change" value="add-figure"/>Add a figure</label>
+        <label><input type="checkbox" name="would-change" value="delete-figure"/>Delete a figure</label>
+        <label><input type="checkbox" name="would-change" value="add-text"/>Add a text</label>
+      </div>
+      <div class="form-group">
+        <label id="comment-label">Do you have any other comment?</label>
+        <textarea name="name" placeholder="Enter additional comments here"></textarea>
+      </div>
+      <div class="form-group">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </section>
+  <section id="sec-2">
+    <div id="image-show">
+      <img id="illustration" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/working_from_anywhere_ub67.svg" alt=""/>
+      <p id="illustration-source">Image from <a id="link" href="https://undraw.co/">Undraw</a></p>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

@@ -1,0 +1,86 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #EFEFEF;
+  font-family: 'Galada', cursive;
+  margin: 0;
+}
+p, a, li, span {
+  color: #EFEFEF;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #ffcb6b;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main styles */
+#main {
+  display: grid;
+  grid-template-columns: 2fr 6fr 1fr;
+  /*place-content: center;*/
+  background-color: #292d3e;
+}
+
+/* First section (first column) */
+#main #basic-info {
+  /*position: fixed;
+  height: 100vh;
+  left: 0;*/
+  background-color: #353a4d;
+  padding: 1em;
+}
+
+#main #basic-info #title {
+  font-size: 3em;
+}
+
+#main #basic-info #img-div {
+  display: grid;
+  width: 500px;
+}
+
+#main #basic-info #img-div #image {
+  place-self: center;
+  max-width: 100%;
+  height: auto;
+}
+#main #basic-info #img-div #img-caption p {
+  color: #AFAFAF;
+}
+
+/* Second section (second column) */
+#main #tribute-info {
+  padding: 1em;
+  color: blue;
+}
+
+/* Third section (third column) */
+#main #timeline {
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  display: grid;
+  background-color: #353a4d;
+  padding: 1em;
+  color: #79ddff;
+}
+
+#main #timeline #timeline-title {
+  place-self: center;
+}
+
+#main #timeline #list {
+  list-style: none;
+}
+
+#main #timeline #list li {
+  margin: 1em 0;
+}

@@ -1,0 +1,146 @@
+<nav id="navbar">
+  <header>Node.js</header>
+  <ul>
+    <li><a href="#get_started" class="nav-link">Get started</a></li>
+    <li><a href="#modules" class="nav-link">Modules</a></li>
+    <li><a href="#file_system" class="nav-link">File system</a></li>
+    <li><a href="#npm" class="nav-link">NPM</a></li>
+    <li><a href="#events" class="nav-link">Events</a></li>
+    <li><a href="#references" class="nav-link">References</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section id="get_started" class="main-section">
+    <header>Get started</header>
+    <p>First, download Node.js from <a href="https://nodejs.org">https://nodejs.org</a>.<br>
+      Then, let's try printing "Hellow World" in the web browser.<br>
+      Create a Node.js file named "myfirst.js" and add the following code.</p>
+    <pre><code>
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello World!');
+}).listen(8080);
+    </code></pre>
+    <p>Save the file. This file tells the computer to print "Hello World" if someone tries to access your computer on port 8080.<br>
+       After this, open your command console and get the directory to be in the folder where you saved the file.<br>
+       When you're in, type</p>
+    <pre><code>node myfirst.js</code></pre>
+    <p>and hit enter.<br>
+       Now your computer works as a server! When someone tries to access your computer on port 8080, they'll se a "Hellow World" message.
+    </p>
+  </section>
+  <section id="modules" class="main-section">
+    <header>Modules</header>
+    <p>Modules are sets of functions that you can code and use them later by calling them in your files.<br>
+       Node.js has some built-in modules that you can try.<br>
+       To include a module, use the require() function, like this:</p>
+    <pre><code>var http = require('http');</code></pre>
+    <p>You're using the http module, that allows you to create a server.<br>
+       Example:</p>
+    <pre><code>
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello World!');
+}).listen(8080);
+    </code></pre>
+    <p>Along this, you can create your own modules and use them in your projects.<br>
+       To create a module, you can follow this example:</p>
+    <pre><code>
+exports.myDateTime = function () {
+  return Date();
+};
+    </code></pre>
+    <p>Note that you're using exports to export your module and let the program know it's able to use it through the project.<br>
+       Now, you can add it to your previous code:</p>
+    <pre><code>
+var http = require('http');
+var dt = require('./myfirstmodule');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write("The date and time are currently: " + dt.myDateTime());
+  res.end();
+}).listen(8080);
+    </code></pre>
+  </section>
+  <section id="file_system" class="main-section">
+    <header>File system</header>
+    <p>The File system module lets you manage and work with the file system of your computer.<br>
+       Some common uses of this module are:</p>
+    <ul>
+      <li>Read files</li>
+      <li>Create files</li>
+      <li>Update files</li>
+      <li>Delete files</li>
+      <li>Rename files</li>
+    </ul>
+    <p>The correcponding functions of these uses are:</p>
+    <pre><code>
+fs.readfile() // Read a file
+      
+fs.appendFile() // Appends specified content to a file
+fs.open() // Takes a "flag" as the second argument and opens the specified file
+fs.writeFile() // Replaces the specified file and content if it exists
+      
+fs.appendFile() // Appends the specified content at the end of the specified file
+fs.writeFile() // Replaces the specified file and content
+      
+fs.unlink() // Deletes the specified file
+      
+fs.rename() // Renames the specified file
+    </code></pre>
+  </section>
+  <section id="npm" class="main-section">
+    <header>NPM</header>
+    <p>NPM is a package manager for Node.js. A package is what contains the files you need for a module.<br>
+       To download and install a package, it's as simple as typing this in the command line:</p>
+    <pre><code>npm install upper-case</code></pre>
+    <p>This downloads and installs the upper-case package.<br>
+       NPM will create a folder named node_modules where the packages will be placed.<br>
+       Once the package is installed, it's ready to use. To use a package type this in your file:</p>
+    <pre><code>var uc = require('upper-case');</code></pre>
+    <p>Example:</p>
+    <pre><code>
+var uc = require('upper-case');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(uc.upperCase("Hello World!"));
+  res.end();
+}).listen(8080);
+    </code></pre>
+  </section>
+  <section id="events" class="main-section">
+    <header>Events</header>
+    <p>Every action on a computer is an event. Like when a connection is made or a file is opened.<br>
+      Node.js has a built-in module, called "Events", where you can create-, fire-, and listen for- your own events.</p>
+    <pre><code>
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+    </code></pre>
+    <p>Here's an example of how you can create an event handler:</p>
+    <pre><code>
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+//Create an event handler:
+var myEventHandler = function () {
+  console.log('I hear a scream!');
+}
+
+//Assign the event handler to an event:
+eventEmitter.on('scream', myEventHandler);
+
+//Fire the 'scream' event:
+eventEmitter.emit('scream');
+    </code></pre>
+  </section>
+  <section id="references" class="main-section">
+    <header>References</header>
+    <p>All the documentation of this page is taken from <a href="https://www.w3schools.com/nodejs">W3Schools</a>.</p>
+  </section>
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
